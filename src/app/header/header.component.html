@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm fixed-top custom-header pl-2 pr-2">
+  <a class="navbar-brand m-0" href="#">
+    <img src="../assets/imgs/Beer-Olympics-Logo.png" alt="Logo" class="img-fluid main-logo"/>
+  </a>
+  <!-- Links -->
+  <div class="text-right right-nav-bar">
+    <img src="../assets/imgs/details.png" alt="Venue Details" class="img-fluid venue-img"/>
+    <ul class="list-inline mb-0 mt-2 action-icons">
+      <li class="list-inline-item">
+        <a href="https://goo.gl/maps/JN3cvHBzzRG2" target="_blank">
+          <img src="../assets/imgs/map-pin.png" alt="Map"/>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="tel:07400428099" tooltip="07400428099">
+          <img src="../assets/imgs/call.png" alt="Call"/>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <img src="../assets/imgs/share.png" alt="Share" style="cursor:pointer"
+        [popover]="popTemplate" [outsideClick]="true" placement="left"/>
+      </li>
+    </ul>
+  </div>
+<ng-template #popTemplate>
+  <share-buttons theme="circles-dark" url="http://beerolympics.in"
+    autoSetMeta="true" class="small-btns"
+  ></share-buttons>
+</ng-template>
+</nav>
+<button type="button" id="showModal" class="btn btn-primary d-none" (click)="openModal(template)">s</button>
+<ng-template #template>
+  <!-- Modal body -->
+  <div class="modal-body" style="font-family: 'Averia Serif Libre' !important;">
+    <div class="card">
+      <div class="card-body doolally-age-gate">
+        <div class="tutorialicon">
+            <img src="../assets/imgs/splashLogo.png" class="img-fluid"/>
+        </div>
+        <br>
+        <span class="load-txt">Welcome To Doolally!</span>
+        <br>
+        <p class="sub-age-txt">Are you of legal drinking age?</p>
+        <ul class="list-inline">
+          <li class="list-inline-item mr-4">
+            <a href="#" class="btn btn-dark choice-btns" (click)="setAgeGone(template)">Yes</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://www.amuldairy.com" class="btn btn-dark choice-btns">No</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>

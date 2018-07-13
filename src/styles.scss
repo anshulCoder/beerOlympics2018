@@ -1,0 +1,435 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free-webfonts/css/fa-brands.css";
+@import "~@fortawesome/fontawesome-free-webfonts/css/fa-solid.css";
+@import "~@fortawesome/fontawesome-free-webfonts/css/fontawesome.css";
+@import '~@ngx-share/button/styles/share-buttons';
+@import '~@ngx-share/button/styles/themes/circles/circles-dark-theme';
+
+body {
+  font-family: 'Averia Serif Libre' !important;
+}
+
+/* Common css */
+.bg-my-blue {
+  background-color: #0558B4 !important;
+  color:#fff !important;
+}
+.bg-my-light-blue {
+  background-color: #50D0FF !important;
+}
+.color-yellow {
+  color:yellow !important;
+}
+.show-in-mobile {
+  display:none;
+}
+.show-from-ipad {
+  display: none;
+}
+.hide-from-ipad {
+  display: block;
+}
+.pull-img-up {
+  margin-top:-1px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.small-btns button {
+  font-size:12px !important;
+}
+
+/* Header css */
+.custom-header {
+  background-color: #0558B4 !important;
+  box-shadow: 0 4px 3px 1px rgba(0,0,0,0.2);
+  height: 135px;
+}
+
+.custom-header .main-logo {
+  width:400px;
+}
+.custom-header .venue-img {
+  width:200px;
+}
+.custom-header .right-nav-bar {
+  width:100%;
+}
+.custom-header .action-icons img {
+  width:30px;
+}
+
+/* Main Body css */
+.main-container {
+  margin-top:130px;
+}
+.my-card {
+  background: transparent !important;
+  border:none !important;
+}
+
+.my-card .card-img-top {
+  width:300px;
+}
+.secondary-container .winners-img {
+  width:400px;
+}
+.third-container .team-img {
+  width: 650px;
+}
+.final-container .bo-kit-img {
+  width:350px;
+}
+.bag-contents {
+  font-size: 14px;
+  line-height: 1.3;
+}
+.desktop-games {
+  display: flex;
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+.desktop-games-imgs {
+  max-width:90%;
+  height:auto;
+}
+.desktop-secondary-img {
+  width:50% !important;
+}
+
+.desktop-bag-contents {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+.desktop-bag-imgs {
+  max-width:90%;
+  height:auto;
+}
+.desktop-bag-imgs-alt {
+  max-width:80%;
+  height:auto;
+}
+.bag-kit-wrapper .card .bag-imgs {
+  width:400px;
+}
+.bag-kit-wrapper .card .bag-imgs-alt {
+  width:350px;
+}
+
+.register-page .register-form input.ng-touched.ng-invalid,
+.register-page .register-form select.ng-touched.ng-invalid {
+  border-bottom:1px solid red;
+}
+.register-page .register-form input,
+.register-page .register-form select {
+  text-align: center;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.last-section .team-img {
+  width: 650px;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+select.form-control option{
+  background-color: #577FBA;
+}
+
+.order-summary .order-title {
+  background: #0984e3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.age-modal {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+.age-modal .modal-content {
+  width: 320px;
+  margin: 0 auto;
+}
+.age-modal .modal-body {
+  font-family: 'Averia Serif Libre' !important;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.age-modal .modal-body .card {
+  border-radius: 0;
+  background: rgb(80,208,255);
+}
+.age-modal .modal-body .card .doolally-age-gate {
+  text-align: center;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.age-modal .modal-body .card .doolally-age-gate .tutorialicon
+{
+    width:120px;
+    margin:0 auto;
+}
+.age-modal .modal-body .card .doolally-age-gate .mdl-grid
+{
+    text-align:center;
+}
+.age-modal .modal-body .card .doolally-age-gate .load-txt
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+.age-modal .modal-body .card .doolally-age-gate .sub-age-txt
+{
+    color: rgba(36, 27, 18, 0.87);
+    font-size: 13px;
+}
+.age-modal .modal-body .card .doolally-age-gate .choice-btns {
+  color: rgb(80,208,255);
+  width:80px;
+  border-radius:0;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image:url('assets/imgs/back.png') !important;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image:url('assets/imgs/next.png') !important;
+}
+
+
+/* footer css */
+.custom-footer {
+  // background-color: rgba(248,249,250, 0.7) !important;
+  background: #0558B4 !important;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+}
+
+/* Custom Loader */
+.custom-body-loader
+{
+  overflow:hidden;
+  position: relative;
+}
+.loader {
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  z-index: 1000000;
+  display:none;
+}
+.my-progress {
+  position: sticky;
+  top:0;
+  height: 5px;
+  display: block;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 2px;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.my-progress .indeterminate {
+  background-color: #26a69a;
+}
+.my-progress .indeterminate:before {
+  content: '';
+  position: absolute;
+  background-color: #0558B4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  -webkit-animation: indeterminate 3.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+          animation: indeterminate 3.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.my-progress .indeterminate:after {
+    content: '';
+    position: absolute;
+    background-color: #0558B4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 3.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            animation: indeterminate-short 3.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 2.15s;
+            animation-delay: 2.15s;
+}
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; }
+}
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; }
+}
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; }
+}
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; }
+}
+
+.alert-custom {
+  z-index: 100000;
+  margin: 10px auto;
+  text-align: center;
+  position: fixed !important;
+  top: 0;
+  left: 50%;
+  padding: 5px !important;
+  font-size: 12px;
+  font-weight: bold;
+  transform: translate(-50%,0);
+}
+
+@media screen and (max-width: 1030px) {
+  .desktop-games {
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .desktop-secondary-img {
+    width: 75%  !important;
+  }
+  .desktop-heading {
+    font-size: 20px !important;
+  }
+  .desktop-text {
+    font-size: 16px !important;
+  }
+  .custom-header {
+    height: 120px;
+  }
+  .main-container {
+    margin-top:115px;
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  .third-container .team-img {
+    width: 450px;
+  }
+  .show-from-ipad {
+    display: block !important;
+  }
+  .hide-from-ipad {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .custom-header .main-logo {
+    width:250px;
+  }
+  .custom-header .venue-img {
+    width:150px;
+  }
+  .custom-header .right-nav-bar {
+    width:45%;
+  }
+}
+
+@media screen and (max-width:465px) {
+  .custom-header .main-logo {
+    width:180px;
+  }
+  .custom-header .right-nav-bar {
+    width:40%;
+  }
+  .custom-header .action-icons img {
+    width:20px;
+  }
+  .third-container .team-img {
+    width: 300px;
+  }
+  .bag-kit-wrapper .card .bag-imgs {
+    width:240px;
+  }
+  .bag-kit-wrapper .card .bag-imgs-alt {
+    width:250px;
+  }
+  .custom-header {
+    height: 90px;
+  }
+  .main-container {
+    margin-top:85px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .secondary-container .winners-img {
+    width:300px;
+  }
+  .my-card .card-img-top {
+    width:250px;
+  }
+  .my-card .game-description, .my-card .game-prize-list {
+    font-size: 13px;
+  }
+  .show-in-mobile {
+    display:block;
+  }
+  .final-container .bo-kit-img {
+    width:250px;
+  }
+  .main-beer-header {
+    font-size: 1.2rem;
+  }
+  .sub-main-beer-header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shrink-font {
+    font-size:14px;
+  }
+}

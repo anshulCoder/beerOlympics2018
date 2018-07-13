@@ -1,0 +1,318 @@
+<div class="container-fluid bg-my-blue main-container register-page">
+  <div class="row pb-3">
+    <div class="col-sm-3 col-xs-0"></div>
+    <div class="col-sm-6 col-xs-12 d-flex justify-content-center pt-5">
+      <form class="form text-center register-form" #mainAthleteForm="ngForm" (ngSubmit)="registerTeam(mainAthleteForm)">
+        <div class="form-group">
+          <label for="teamName" class="color-yellow">Enter Team Name:</label>
+          <input type="text" id="teamName" name="teamName" ngModel class="form-control"
+          placeholder="E.g. Beer Chuggers, Hop Heads" required/>
+        </div>
+        <div class="my-4">
+
+          <div class="form-group">
+            <label for="capCity" class="color-yellow">Captain City:</label>
+            <input type="text" id="capCity" name="capCity" ngModel class="form-control"
+            placeholder="E.g. Mumbai" required/>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap1Name" class="color-yellow">Captain Name:</label>
+                <input type="text" id="cap1Name" name="cap1Name" ngModel class="form-control"
+                placeholder="Full Name" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap1Age" class="color-yellow">Captain Age:</label>
+                <input type="number" id="cap1Age" name="cap1Age" ngModel class="form-control"
+                placeholder="21" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap1Email" class="color-yellow">Captain Email:</label>
+                <input type="email" id="cap1Email" name="cap1Email" ngModel class="form-control"
+                placeholder="abc@gmail.com" pattern="^[a-z]+[a-z0-9._+]+@[a-z.-]+\.[a-z.]{2,5}$" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap1Phone" class="color-yellow">Captain Mobile #:</label>
+                <input type="number" id="cap1Phone" name="cap1Phone" ngModel class="form-control" pattern="^[0-9]{10,10}$"
+                placeholder="79xxxxxxxx" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap1tShirt" name="cap1tShirt" ngModel class="form-control" required>
+                  <option value="">T-shirt size</option>
+                  <option *ngFor="let t of tShirtSizes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap1Meal" name="cap1Meal" ngModel class="form-control" required>
+                  <option value="">Select snack</option>
+                  <option *ngFor="let t of snackTypes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-4">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap2Name" class="color-yellow">Beer Athlete 1:</label>
+                <input type="text" id="cap2Name" name="cap2Name" ngModel class="form-control"
+                placeholder="Full Name" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap2Age" class="color-yellow">Beer Athlete 1 Age:</label>
+                <input type="number" id="cap2Age" name="cap2Age" ngModel class="form-control" min="21" max="100"
+                placeholder="21" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap2tShirt" name="cap2tShirt" ngModel class="form-control" required>
+                  <option value="">T-shirt size</option>
+                  <option *ngFor="let t of tShirtSizes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap2Meal" name="cap2Meal" ngModel class="form-control" required>
+                  <option value="">Select snack</option>
+                  <option *ngFor="let t of snackTypes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-4">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap3Name" class="color-yellow">Beer Athlete 2:</label>
+                <input type="text" id="cap3Name" name="cap3Name" ngModel class="form-control"
+                placeholder="Full Name" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap3Age" class="color-yellow">Beer Athlete 2 Age:</label>
+                <input type="number" id="cap3Age" name="cap3Age" ngModel class="form-control" min="21" max="100"
+                placeholder="21" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap3tShirt" name="cap3tShirt" ngModel class="form-control" required>
+                  <option value="">T-shirt size</option>
+                  <option *ngFor="let t of tShirtSizes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap3Meal" name="cap3Meal" ngModel class="form-control" required>
+                  <option value="">Select snack</option>
+                  <option *ngFor="let t of snackTypes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-4">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap4Name" class="color-yellow">Beer Athlete 3:</label>
+                <input type="text" id="cap4Name" name="cap4Name" ngModel class="form-control"
+                placeholder="Full Name" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="cap4Age" class="color-yellow">Beer Athlete 3 Age:</label>
+                <input type="number" id="cap4Age" name="cap4Age" ngModel class="form-control" min="21" max="100"
+                placeholder="21" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap4tShirt" name="cap4tShirt" ngModel class="form-control" required>
+                  <option value="">T-shirt size</option>
+                  <option *ngFor="let t of tShirtSizes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <select id="cap4Meal" name="cap4Meal" ngModel class="form-control" required>
+                  <option value="">Select snack</option>
+                  <option *ngFor="let t of snackTypes" [value]="t.value">
+                    {{t.text}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mr-4 ml-4 mt-3">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="1"
+                  name="tncCheck" ngModel required>I have read and understood the <a class="color-yellow" style="cursor:pointer;" (click)="customDataModal.show()">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-4 order-summary" *ngIf="mainAthleteForm.valid">
+          <div class="d-flex mb-2" style="align-items:baseline;" [ngClass]="{'pl-1': isCouponChecked, 'pl-4': !isCouponChecked}">
+            <label class="form-check-label" [ngClass]="{'w-50': isCouponChecked}">
+             <input type="checkbox" class="form-check-input" value="1" name="isCouponSet" [(ngModel)]="isCouponChecked">Have Coupon?
+            </label>
+            <ng-container *ngIf="isCouponChecked">
+              <input type="text" placeholder="BO-XXXX" name="couponCode" [(ngModel)]="couponCode" class="form-control" />
+              <button type="button" class="btn btn-success ml-1" [disabled]="couponApplied" (click)="checkCoupon()">Apply</button>
+            </ng-container>
+          </div>
+
+          <h5 class="order-title">Order summary</h5>
+          <div class="col-xs-12 mt-2 mb-2 clearfix">
+            <div class="float-left">
+                <span class="color-yellow shrink-font">Team of Four (1 x Rs. {{teamPrice}})</span>
+            </div>
+            <div class="float-right">
+                <span class="shrink-font">Rs. {{teamPrice}}</span>
+            </div>
+          </div>
+
+          <div class="col-xs-12 mt-2 clearfix" *ngIf="couponApplied">
+            <div class="float-left">
+                <span class="color-yellow shrink-font">Coupon (Rs. {{couponAmt}} off)</span>
+            </div>
+            <div class="float-right">
+                <span class="shrink-font">-(Rs. {{couponAmt}})</span>
+                <button type="button" class="close pl-1" (click)="clearCoupon()">&times;</button>
+            </div>
+          </div>
+
+          <hr style="border-color:#fff;margin-bottom:5px;"/>
+          <div class="col-xs-12 mt-2 clearfix">
+            <div class="float-left">
+                <span class="color-yellow shrink-font">Total</span>
+            </div>
+            <div class="float-right">
+                <span *ngIf="couponApplied;else noCoupon">Rs. {{(teamPrice - couponAmt)}}</span>
+                <ng-template #noCoupon>
+                  <span class="shrink-font">Rs. {{teamPrice}}</span>
+                </ng-template>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-warning" [disabled]="!mainAthleteForm.valid">PAY NOW</button>
+      </form>
+    </div>
+    <div class="col-sm-3 col-xs-0"></div>
+  </div>
+</div>
+<img class="img-fluid show-in-mobile mb-3 pull-img-up" src="../assets/imgs/section-top-darkblue.png" alt="Dark Blue Arrow"/>
+
+<div class="modal fade" bsModal #customDataModal="bs-modal">
+  <div class="modal-dialog modal-lg myDataModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Terms and Conditions</h4>
+        <button type="button" class="close" (click)="customDataModal.hide()">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="font-family: 'Averia Serif Libre' !important;">
+        <ul>
+          <li>
+            You must be of legal drinking age, 21 and above (for beer). Carrying ID is mandatory. This is the one rule we will enforce.
+          </li>
+          <li>
+            The games are divided into two part - Eliminations and Finals.
+            <ul>
+              <li>
+                The elimination rounds are a race against time. All four team members will play during the elimination rounds.
+              </li>
+              <li>
+                Four teams can qualify in EACH game, thus everyone stands a fair chance of making it to the finals.
+              </li>
+              <li>
+                In the finals, teams will face off against each other. Qualifying teams will nominate one player to represent them in the finals.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Rules for each individual game shall be duly explained by our referees.
+          </li>
+          <li>
+            Each game has a referee, and the referee is always right.
+          </li>
+          <li>
+            Also you are definitely drunk, the referee is not.
+          </li>
+          <li>
+            This is just a game. Not a death match. Please don't lose your sense of proportion.
+          </li>
+          <li>
+            The grand prize will be awarded on a point grade system.
+          </li>
+          <li>
+            In case of a tie, the final decision will be taken by the referees.
+          </li>
+          <li>
+            As this is an ALCOHOL consumption event, please be responsible. Make sure that your team has a designated driver/cab after the tournament is over.
+          </li>
+          <li>
+            We want to make sure everyone has a great time, but more importantly that everyone makes it home safe so you can keep playing beer games with us.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
