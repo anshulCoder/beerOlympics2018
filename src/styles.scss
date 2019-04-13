@@ -40,22 +40,78 @@ input[type=number]::-webkit-outer-spin-button {
 .small-btns button {
   font-size:12px !important;
 }
-
+.color-darkgray {
+  color: #111;
+}
+.opacity6 {
+  opacity: 0.6;
+}
+.opacity7 {
+  opacity: 0.7;
+}
+.sub-main-beer-header::first-letter {
+  font-size: 25px;
+  font-weight: 800;
+}
+.event-description {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: 0 auto;
+}
+.games-title {
+  width: 300px;
+}
+.info-dotted-border {
+  border: 1px dashed green;
+  width: 100%;
+}
+.info-green-header {
+  color: green;
+  text-transform: uppercase;
+}
+.game-row {
+  justify-content: space-evenly;
+}
+.game-row .game-img {
+  width: 400px;
+}
+.content-heading {
+  text-align: center;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.participation-container {
+  padding-top: 20px;
+  padding-left: 20px;
+}
 /* Header css */
 .custom-header {
   background-color: #0558B4 !important;
   box-shadow: 0 4px 3px 1px rgba(0,0,0,0.2);
   height: 135px;
+  align-items: normal !important;
+  padding-left: 3rem;
+}
+.w50 {
+  width: 50%;
 }
 
 .custom-header .main-logo {
-  width:400px;
+  width:200px;
 }
 .custom-header .venue-img {
   width:200px;
 }
 .custom-header .right-nav-bar {
   width:100%;
+}
+.custom-header .right-nav-bar .date-img {
+  width: 200px;
+  padding-top: 10px;
 }
 .custom-header .action-icons img {
   width:30px;
@@ -92,8 +148,12 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 60px;
 }
 .desktop-games-imgs {
-  max-width:90%;
+  max-width:80%;
   height:auto;
+}
+.main-event-logo {
+  max-width: 50%;
+  height: auto;
 }
 .desktop-secondary-img {
   width:50% !important;
@@ -126,12 +186,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .register-page .register-form input,
 .register-page .register-form select {
-  text-align: center;
+  text-align: left;
   border-radius: 0;
   border: none;
   background: transparent;
-  border-bottom: 1px solid #fff;
-  color: #fff;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  padding: 0;
+}
+.register-page .register-btn {
+  border-radius: 2px;
+  background-color:#0558B4 !important;
+  color: #fff !important;
+  width: 150px;
 }
 .last-section .team-img {
   width: 650px;
@@ -344,11 +411,20 @@ select.form-control option{
   .desktop-text {
     font-size: 16px !important;
   }
-  .custom-header {
-    height: 120px;
-  }
   .main-container {
     margin-top:115px;
+  }
+
+  .custom-header .right-nav-bar .register-btn {
+    height: 25px;
+    padding: 0;
+  }
+
+  .custom-header .right-nav-bar .date-img {
+    width: 150px;
+  }
+  .event-description {
+    width: 500px;
   }
 
 }
@@ -363,11 +439,32 @@ select.form-control option{
   .hide-from-ipad {
     display: none !important;
   }
+  .main-event-logo {
+    max-width: 70%;
+  }
+  .width-half-after-ipad {
+    width: 50%;
+  }
+  .width-medium-after-ipad {
+    width: 80% !important;
+  }
+  .participation-container {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .fix-after-ipad {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @media screen and (max-width:580px) {
   .custom-header .main-logo {
-    width:250px;
+    width:170px;
   }
   .custom-header .venue-img {
     width:150px;
@@ -375,14 +472,23 @@ select.form-control option{
   .custom-header .right-nav-bar {
     width:45%;
   }
+  .event-description {
+    width: 350px;
+  }
+  .game-description {
+    font-size: 12px;
+  }
+  .game-row .game-img {
+    width: 300px;
+  }
+  .content-heading {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width:465px) {
-  .custom-header .main-logo {
-    width:180px;
-  }
   .custom-header .right-nav-bar {
-    width:40%;
+    width:50%;
   }
   .custom-header .action-icons img {
     width:20px;
@@ -396,11 +502,20 @@ select.form-control option{
   .bag-kit-wrapper .card .bag-imgs-alt {
     width:250px;
   }
-  .custom-header {
-    height: 90px;
-  }
   .main-container {
     margin-top:85px;
+  }
+  .info-green-header {
+    font-size: 1rem;
+  }
+  .games-sub-text {
+    font-size: 0.6rem;
+  }
+  .font-medium {
+    font-size: 0.8rem;
+  }
+  .font-for-small-screen {
+    font-size: 14px;
   }
 }
 
@@ -426,10 +541,29 @@ select.form-control option{
   .sub-main-beer-header {
     font-size: 14px;
   }
+  .custom-header {
+    padding-left: 10px !important;
+    height: 110px;
+  }
+  .custom-header .main-logo {
+    width: 140px;
+  }
+  .custom-header .right-nav-bar .register-btn {
+    font-size: 15px;
+  }
+  .event-description {
+    width: 250px;
+  }
+  .main-beer-header {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .shrink-font {
     font-size:14px;
+  }
+  .custom-header .right-nav-bar .register-btn {
+    font-size: 12px;
   }
 }

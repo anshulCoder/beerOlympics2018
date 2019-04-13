@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
+import { Router } from '@angular/router';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
     class: 'age-modal'
   };
 
-  constructor(private modalService: BsModalService) {
+  constructor(private modalService: BsModalService,
+              private router: Router) {
 
     setTimeout(() => {
       if (this.getLocal("ageGateGone") == null) {
@@ -36,6 +38,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  navToRegister(modal) {
+    modal.hide();
+    this.router.navigate(['register']);
   }
 
   getLocal(key) {

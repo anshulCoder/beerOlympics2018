@@ -1,49 +1,45 @@
-<div class="container-fluid bg-my-blue main-container register-page">
+<div class="container-fluid main-container register-page">
   <div class="row pb-3">
     <div class="col-sm-3 col-xs-0"></div>
     <div class="col-sm-6 col-xs-12 d-flex justify-content-center pt-5">
-      <form class="form text-center register-form" #mainAthleteForm="ngForm" (ngSubmit)="registerTeam(mainAthleteForm)">
+      <form class="form register-form" #mainAthleteForm="ngForm" (ngSubmit)="registerTeam(mainAthleteForm)">
         <div class="form-group">
-          <label for="teamName" class="color-yellow">Enter Team Name:</label>
+          <label for="teamName">Enter Team Name:</label>
           <input type="text" id="teamName" name="teamName" ngModel class="form-control"
           placeholder="E.g. Beer Chuggers, Hop Heads" required/>
         </div>
         <div class="my-4">
 
+          <label>Captain: </label>
           <div class="form-group">
-            <label for="capCity" class="color-yellow">Captain City:</label>
-            <input type="text" id="capCity" name="capCity" ngModel class="form-control"
-            placeholder="E.g. Mumbai" required/>
+            <input type="text" id="cap1Name" name="cap1Name" ngModel class="form-control"
+            placeholder="Full Name" required/>
           </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap1Name" class="color-yellow">Captain Name:</label>
-                <input type="text" id="cap1Name" name="cap1Name" ngModel class="form-control"
-                placeholder="Full Name" required/>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-              <div class="form-group">
-                <label for="cap1Age" class="color-yellow">Captain Age:</label>
                 <input type="number" id="cap1Age" name="cap1Age" ngModel class="form-control"
-                placeholder="21" required/>
+                placeholder="Age" required/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <input type="text" id="capCity" name="capCity" ngModel class="form-control"
+                placeholder="City" required/>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap1Email" class="color-yellow">Captain Email:</label>
                 <input type="email" id="cap1Email" name="cap1Email" ngModel class="form-control"
-                placeholder="abc@gmail.com" pattern="^[a-z]+[a-z0-9._+]+@[a-z.-]+\.[a-z.]{2,5}$" required/>
+                placeholder="Email" pattern="^[a-z]+[a-z0-9._+]+@[a-z.-]+\.[a-z.]{2,5}$" required/>
               </div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap1Phone" class="color-yellow">Captain Mobile #:</label>
                 <input type="number" id="cap1Phone" name="cap1Phone" ngModel class="form-control" pattern="^[0-9]{10,10}$"
-                placeholder="79xxxxxxxx" required/>
+                placeholder="Mobile no." required/>
               </div>
             </div>
           </div>
@@ -73,20 +69,20 @@
 
         <div class="my-4">
           <div class="row">
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-12 col-xs-12">
+              <label>Beer Athlete 2: </label>
               <div class="form-group">
-                <label for="cap2Name" class="color-yellow">Beer Athlete 1:</label>
                 <input type="text" id="cap2Name" name="cap2Name" ngModel class="form-control"
                 placeholder="Full Name" required/>
               </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <!-- <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap2Age" class="color-yellow">Beer Athlete 1 Age:</label>
+                <label for="cap2Age" >Beer Athlete 2 Age:</label>
                 <input type="number" id="cap2Age" name="cap2Age" ngModel class="form-control" min="21" max="100"
                 placeholder="21" required/>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
@@ -114,20 +110,20 @@
 
         <div class="my-4">
           <div class="row">
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-12 col-xs-12">
+              <label>Beer Athlete 3: </label>
               <div class="form-group">
-                <label for="cap3Name" class="color-yellow">Beer Athlete 2:</label>
                 <input type="text" id="cap3Name" name="cap3Name" ngModel class="form-control"
                 placeholder="Full Name" required/>
               </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <!-- <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap3Age" class="color-yellow">Beer Athlete 2 Age:</label>
+                <label for="cap3Age" >Beer Athlete 2 Age:</label>
                 <input type="number" id="cap3Age" name="cap3Age" ngModel class="form-control" min="21" max="100"
                 placeholder="21" required/>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
@@ -155,20 +151,20 @@
 
         <div class="my-4">
           <div class="row">
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-12 col-xs-12">
+              <label>Beer Athlete 4:</label>
               <div class="form-group">
-                <label for="cap4Name" class="color-yellow">Beer Athlete 3:</label>
                 <input type="text" id="cap4Name" name="cap4Name" ngModel class="form-control"
                 placeholder="Full Name" required/>
               </div>
             </div>
-            <div class="col-sm-6 col-xs-12">
+            <!-- <div class="col-sm-6 col-xs-12">
               <div class="form-group">
-                <label for="cap4Age" class="color-yellow">Beer Athlete 3 Age:</label>
+                <label for="cap4Age" >Beer Athlete 3 Age:</label>
                 <input type="number" id="cap4Age" name="cap4Age" ngModel class="form-control" min="21" max="100"
                 placeholder="21" required/>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
@@ -198,7 +194,7 @@
               <div class="form-group">
                 <label class="form-check-label">
                   <input type="checkbox" class="form-check-input" value="1"
-                  name="tncCheck" ngModel required>I have read and understood the <a class="color-yellow" style="cursor:pointer;" (click)="customDataModal.show()">terms and conditions</a>
+                  name="tncCheck" ngModel required>I have read and understood the <a  style="cursor:pointer;" (click)="customDataModal.show()">terms and conditions</a>
                 </label>
               </div>
             </div>
@@ -216,10 +212,10 @@
             </ng-container>
           </div>
 
-          <h5 class="order-title">Order summary</h5>
+          <h5 class="order-title pl-2">Order summary</h5>
           <div class="col-xs-12 mt-2 mb-2 clearfix">
             <div class="float-left">
-                <span class="color-yellow shrink-font">Team of Four (1 x Rs. {{teamPrice}})</span>
+                <span class="shrink-font">Team of Four (1 x Rs. {{teamPrice}})</span>
             </div>
             <div class="float-right">
                 <span class="shrink-font">Rs. {{teamPrice}}</span>
@@ -228,7 +224,7 @@
 
           <div class="col-xs-12 mt-2 clearfix" *ngIf="couponApplied">
             <div class="float-left">
-                <span class="color-yellow shrink-font">Coupon (Rs. {{couponAmt}} off)</span>
+                <span class="shrink-font">Coupon (Rs. {{couponAmt}} off)</span>
             </div>
             <div class="float-right">
                 <span class="shrink-font">-(Rs. {{couponAmt}})</span>
@@ -239,7 +235,7 @@
           <hr style="border-color:#fff;margin-bottom:5px;"/>
           <div class="col-xs-12 mt-2 clearfix">
             <div class="float-left">
-                <span class="color-yellow shrink-font">Total</span>
+                <span class="shrink-font">Total</span>
             </div>
             <div class="float-right">
                 <span *ngIf="couponApplied;else noCoupon">Rs. {{(teamPrice - couponAmt)}}</span>
@@ -251,13 +247,13 @@
 
         </div>
 
-        <button type="submit" class="btn btn-warning" [disabled]="!mainAthleteForm.valid">PAY NOW</button>
+        <button type="submit" class="btn btn-warning register-btn" [disabled]="!mainAthleteForm.valid">PAY NOW</button>
       </form>
     </div>
     <div class="col-sm-3 col-xs-0"></div>
   </div>
 </div>
-<img class="img-fluid show-in-mobile mb-3 pull-img-up" src="../assets/imgs/section-top-darkblue.png" alt="Dark Blue Arrow"/>
+<!-- <img class="img-fluid show-in-mobile mb-3 pull-img-up" src="../assets/imgs/section-top-darkblue.png" alt="Dark Blue Arrow"/> -->
 
 <div class="modal fade" bsModal #customDataModal="bs-modal">
   <div class="modal-dialog modal-lg myDataModal">
@@ -268,7 +264,7 @@
       </div>
 
       <!-- Modal body -->
-      <div class="modal-body" style="font-family: 'Averia Serif Libre' !important;">
+      <div class="modal-body" style="font-family: 'Averia Serif Libre' !important; font-size: 0.8rem;">
         <ul>
           <li>
             You must be of legal drinking age, 21 and above (for beer). Carrying ID is mandatory. This is the one rule we will enforce.

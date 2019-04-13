@@ -20,7 +20,7 @@ export class RegisterFormComponent implements OnInit {
     {value: 1, text: 'Veg'},
     {value: 2, text: 'Non-Veg'}
   ];
-  teamPrice = 12000;
+  teamPrice = 8000;
   isCouponChecked = false;
   couponApplied = false;
   couponCode = '';
@@ -114,9 +114,9 @@ export class RegisterFormComponent implements OnInit {
     }
 
     let capAge = +mainForm.value['cap1Age'];
-    let athlete1Age = +mainForm.value['cap2Age'];
-    let athlete2Age = +mainForm.value['cap3Age'];
-    let athlete3Age = +mainForm.value['cap4Age'];
+    // let athlete1Age = +mainForm.value['cap2Age'];
+    // let athlete2Age = +mainForm.value['cap3Age'];
+    // let athlete3Age = +mainForm.value['cap4Age'];
     if ( !(capAge >= 21 && capAge <= 99) ) {
       this.shareService.alertEmit.emit({
         showAlert: true,
@@ -125,30 +125,30 @@ export class RegisterFormComponent implements OnInit {
       });
       return false;
     }
-    if ( !(athlete1Age >= 21 && athlete1Age <= 99) ) {
-      this.shareService.alertEmit.emit({
-        showAlert: true,
-        aText: 'Athlete 1 age must be above 21!',
-        aType: 'error'
-      });
-      return false;
-    }
-    if ( !(athlete2Age >= 21 && athlete2Age <= 99) ) {
-      this.shareService.alertEmit.emit({
-        showAlert: true,
-        aText: 'Athlete 2 age must be above 21!',
-        aType: 'error'
-      });
-      return false;
-    }
-    if ( !(athlete3Age >= 21 && athlete3Age <= 99) ) {
-      this.shareService.alertEmit.emit({
-        showAlert: true,
-        aText: 'Athlete 3 age must be above 21!',
-        aType: 'error'
-      });
-      return false;
-    }
+    // if ( !(athlete1Age >= 21 && athlete1Age <= 99) ) {
+    //   this.shareService.alertEmit.emit({
+    //     showAlert: true,
+    //     aText: 'Athlete 1 age must be above 21!',
+    //     aType: 'error'
+    //   });
+    //   return false;
+    // }
+    // if ( !(athlete2Age >= 21 && athlete2Age <= 99) ) {
+    //   this.shareService.alertEmit.emit({
+    //     showAlert: true,
+    //     aText: 'Athlete 2 age must be above 21!',
+    //     aType: 'error'
+    //   });
+    //   return false;
+    // }
+    // if ( !(athlete3Age >= 21 && athlete3Age <= 99) ) {
+    //   this.shareService.alertEmit.emit({
+    //     showAlert: true,
+    //     aText: 'Athlete 3 age must be above 21!',
+    //     aType: 'error'
+    //   });
+    //   return false;
+    // }
     if (this.couponApplied) {
       this.teamPrice -= this.couponAmt;
     }

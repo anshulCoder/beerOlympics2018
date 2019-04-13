@@ -1,26 +1,27 @@
-<nav class="navbar navbar-expand-sm fixed-top custom-header pl-2 pr-2">
+<nav class="navbar navbar-expand-sm fixed-top custom-header pr-2">
   <a class="navbar-brand m-0" href="#">
-    <img src="../assets/imgs/Beer-Olympics-Logo.png" alt="Logo" class="img-fluid main-logo"/>
+    <img src="../assets/imgs_2019/header-logo.png" alt="Logo" class="img-fluid main-logo"/>
   </a>
   <!-- Links -->
   <div class="text-right right-nav-bar">
-    <img src="../assets/imgs/details.png" alt="Venue Details" class="img-fluid venue-img"/>
+    <button type="button" class="btn btn-warning rounded-0 mt-1 mb-1 register-btn" (click)="customDataModal.show()">REGISTER YOUR TEAM</button>
     <ul class="list-inline mb-0 mt-2 action-icons">
       <li class="list-inline-item">
-        <a href="https://goo.gl/maps/JN3cvHBzzRG2" target="_blank">
-          <img src="../assets/imgs/map-pin.png" alt="Map"/>
-        </a>
-      </li>
-      <li class="list-inline-item">
         <a href="tel:07400428099" tooltip="07400428099">
-          <img src="../assets/imgs/call.png" alt="Call"/>
+          <img src="../assets/imgs_2019/call.png" alt="Call"/>
         </a>
       </li>
       <li class="list-inline-item">
         <img src="../assets/imgs/share.png" alt="Share" style="cursor:pointer"
         [popover]="popTemplate" [outsideClick]="true" placement="left"/>
       </li>
+      <li class="list-inline-item">
+        <a href="https://goo.gl/maps/JN3cvHBzzRG2" target="_blank">
+          <img src="../assets/imgs_2019/location.png" alt="Map"/>
+        </a>
+      </li>
     </ul>
+    <img src="../assets/imgs_2019/date.png" alt="Date" class="date-img" />
   </div>
 <ng-template #popTemplate>
   <share-buttons theme="circles-dark" url="http://beerolympics.in"
@@ -53,3 +54,64 @@
     </div>
   </div>
 </ng-template>
+
+<div class="modal fade" bsModal #customDataModal="bs-modal">
+  <div class="modal-dialog modal-lg myDataModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Terms and Conditions</h4>
+        <button type="button" class="close" (click)="customDataModal.hide()">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="font-family: 'Averia Serif Libre' !important;font-size: 0.9rem;">
+        <ul>
+          <li>
+            You must be of legal drinking age, 21 and above (for beer). Carrying ID is mandatory. This is the one rule we will enforce.
+          </li>
+          <li>
+            The games are divided into two part - Eliminations and Finals.
+            <ul>
+              <li>
+                The elimination rounds are a race against time. All four team members will play during the elimination rounds.
+              </li>
+              <li>
+                Four teams can qualify in EACH game, thus everyone stands a fair chance of making it to the finals.
+              </li>
+              <li>
+                In the finals, teams will face off against each other. Qualifying teams will nominate one player to represent them in the finals.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Rules for each individual game shall be duly explained by our referees.
+          </li>
+          <li>
+            Each game has a referee, and the referee is always right.
+          </li>
+          <li>
+            Also you are definitely drunk, the referee is not.
+          </li>
+          <li>
+            This is just a game. Not a death match. Please don't lose your sense of proportion.
+          </li>
+          <li>
+            The grand prize will be awarded on a point grade system.
+          </li>
+          <li>
+            In case of a tie, the final decision will be taken by the referees.
+          </li>
+          <li>
+            As this is an ALCOHOL consumption event, please be responsible. Make sure that your team has a designated driver/cab after the tournament is over.
+          </li>
+          <li>
+            We want to make sure everyone has a great time, but more importantly that everyone makes it home safe so you can keep playing beer games with us.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-danger" (click)="navToRegister(customDataModal)">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>

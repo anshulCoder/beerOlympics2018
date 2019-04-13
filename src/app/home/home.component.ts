@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+//import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,15 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 })
 export class HomeComponent implements OnInit {
 
-  defaultSlideCount = 1;
-  sliderConfig : SwiperConfigInterface = {
-    slidesPerView: this.defaultSlideCount,
-    loop: true
-  };
-  sliderNewConfig: SwiperConfigInterface = {
-    autoplay: false,
-    loop: true
-  };
+  //defaultSlideCount = 1;
+  // sliderConfig : SwiperConfigInterface = {
+  //   slidesPerView: this.defaultSlideCount,
+  //   loop: true
+  // };
+  // sliderNewConfig: SwiperConfigInterface = {
+  //   autoplay: false,
+  //   loop: true
+  // };
 
   constructor() {
 
