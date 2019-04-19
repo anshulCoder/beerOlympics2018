@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import {SharingService} from "./services/sharing.service";
 import { Meta } from '@angular/platform-browser';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
   alertType = '';
   showAlert = false;
   isLoading = false;
+  @ViewChild('customDataModal') customDataModal: ModalDirective;
 
   constructor(private router: Router,
               private sharingService: SharingService,
@@ -49,11 +51,22 @@ export class AppComponent implements OnInit {
         }
       }
     );
+
+    this.sharingService.openTnC.subscribe(
+      (data) => {
+        this.customDataModal.show();
+      }
+    );
   }
 
   fadeAlertAway() {
     setTimeout(() => {
       this.showAlert = false;
     }, 10000);
+  }
+
+  navToRegister(modal) {
+    modal.hide();
+    this.router.navigate(['register']);
   }
 }

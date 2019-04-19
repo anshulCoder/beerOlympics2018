@@ -84,6 +84,17 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: space-evenly;
   align-items: center;
 }
+.prize-container .prize-content-left,
+.prize-container .prize-content-right
+{
+  flex-direction: column;
+}
+.flex-direction-col {
+  flex-direction: column;
+}
+.kit-size {
+  width: 200px;
+}
 .participation-container {
   padding-top: 20px;
   padding-left: 20px;
@@ -116,7 +127,12 @@ input[type=number]::-webkit-outer-spin-button {
 .custom-header .action-icons img {
   width:30px;
 }
-
+.desktop-game-img {
+  width: 200px;
+}
+.desktop-game-list .list-inline-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
 /* Main Body css */
 .main-container {
   margin-top:130px;
@@ -237,7 +253,7 @@ select.form-control option{
 }
 .age-modal .modal-body .card {
   border-radius: 0;
-  background: rgb(80,208,255);
+  // background: rgb(80,208,255);
 }
 .age-modal .modal-body .card .doolally-age-gate {
   text-align: center;
@@ -265,7 +281,7 @@ select.form-control option{
     font-size: 13px;
 }
 .age-modal .modal-body .card .doolally-age-gate .choice-btns {
-  color: rgb(80,208,255);
+  // color: rgb(80,208,255);
   width:80px;
   border-radius:0;
 }
@@ -395,9 +411,30 @@ select.form-control option{
   transform: translate(-50%,0);
 }
 
+@media screen and (max-width: 1150px) {
+  .desktop-game-img {
+    width: 150px;
+  }
+}
+
 @media screen and (max-width: 1030px) {
   .desktop-games {
     padding-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .kit-size {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .desktop-game-img {
+    width: 120px;
+  }
+  .games-sub-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -550,9 +587,6 @@ select.form-control option{
   }
   .custom-header .right-nav-bar .register-btn {
     font-size: 15px;
-  }
-  .event-description {
-    width: 250px;
   }
   .main-beer-header {
     font-size: 1.2rem;

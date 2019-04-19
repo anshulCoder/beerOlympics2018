@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { Router } from '@angular/router';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import {SharingService} from "../services/sharing.service";
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
   };
 
   constructor(private modalService: BsModalService,
+              private sharingService: SharingService,
               private router: Router) {
 
     setTimeout(() => {
@@ -38,6 +40,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  showTnC() {
+    this.sharingService.openTnC.emit();
   }
 
   navToRegister(modal) {

@@ -5,6 +5,7 @@ export class SharingService {
 
   loadingEmit = new EventEmitter<any>();
   alertEmit = new EventEmitter<any>();
+  openTnC = new EventEmitter<any>();
 
   getAge(birthDate): any {
     let today = new Date();

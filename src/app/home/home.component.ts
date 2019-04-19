@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharingService} from "../services/sharing.service";
 //import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   //   loop: true
   // };
 
-  constructor() {
+  constructor(private sharingService: SharingService) {
 
   }
 
@@ -28,6 +29,10 @@ export class HomeComponent implements OnInit {
     //   console.log('in');
     //   this.adjustMargin();
     // }, 100);
+  }
+
+  showTnC() {
+    this.sharingService.openTnC.emit();
   }
 
   adjustMargin() {
