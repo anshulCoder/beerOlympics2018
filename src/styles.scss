@@ -84,6 +84,21 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: space-evenly;
   align-items: center;
 }
+.fixed-desktop-containers {
+  width: 450px;
+}
+.stay-right {
+  margin: 0 0 0 auto;
+}
+.stay-left {
+  margin: auto 0 0 0;
+}
+.stay-center {
+  margin: 0 auto;
+}
+.big-desktop-container {
+  width: 930px;
+}
 .prize-container .prize-content-left,
 .prize-container .prize-content-right
 {
@@ -129,6 +144,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .desktop-game-img {
   width: 200px;
+  height: 230px !important;
 }
 .desktop-game-list .list-inline-item:not(:last-child) {
   margin-right: 1.5rem;
@@ -414,6 +430,7 @@ select.form-control option{
 @media screen and (max-width: 1150px) {
   .desktop-game-img {
     width: 150px;
+    height: 180px !important;
   }
 }
 
@@ -427,15 +444,26 @@ select.form-control option{
   .kit-size {
     width: 150px;
   }
+  .games-sub-text {
+    font-size: 0.8rem;
+  }
+  .games-sub-text.slightly-big {
+    font-size: 0.85rem;
+  }
+  .fixed-desktop-containers {
+    width: 350px;
+  }
+  .big-desktop-container {
+    width: 730px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .desktop-game-img {
     width: 120px;
+    height: 180px !important;
   }
-  .games-sub-text {
-    font-size: 0.8rem;
-  }
+
 }
 
 @media screen and (max-width: 800px) {
