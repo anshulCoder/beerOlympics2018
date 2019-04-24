@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { SharingService } from '../services/sharing.service';
 import { NgForm } from '@angular/forms';
 import { BeerOlympicsApiService } from '../services/beer-olympics-api.service';
@@ -26,12 +26,31 @@ export class RegisterFormComponent implements OnInit {
   couponCode = '';
   couponAmt = 0;
   capMob = 0;
+  @ViewChild('mainAthleteForm') mainAthleteForm:NgForm;
 
   constructor(private shareService: SharingService,
               private beerAPI: BeerOlympicsApiService) { }
 
   ngOnInit() {
     this.adjustMargin();
+    setTimeout(() => {
+      let beerSaveData = this.getLocal('beerRegForm');
+      if(beerSaveData) {
+        this.mainAthleteForm.setValue(beerSaveData);
+      }
+    }, 1000);
+
+    this.mainAthleteForm.valueChanges.subscribe(changes => {
+      if(this.mainAthleteForm.dirty) {
+        let beerData = changes;
+        beerData['tncCheck'] = false;
+        if (beerData['isCouponSet'])
+        beerData['isCouponSet'] = false;
+        if (beerData['couponCode'])
+        beerData['couponCode'] = "";
+        this.setLocal('beerRegForm', beerData);
+      }
+    });
   }
 
   adjustMargin() {
@@ -180,6 +199,54 @@ export class RegisterFormComponent implements OnInit {
     this.couponCode = '';
     this.couponAmt = 0;
     this.couponApplied = false;
+  }
+
+  getLocal(key) {
+    if (typeof (Storage) == "undefined")
+    {
+      return false;
+    }
+
+    try
+    {
+      let record = JSON.parse(localStorage.getItem(key));
+      if (!record)
+      {
+        return null;
+      }
+      if(new Date().getTime() < record.timestamp && JSON.parse(record.value) != null)
+      {
+        return JSON.parse(record.value);
+      }
+      else
+      {
+        return null;
+      }
+    }
+    catch (e)
+    {
+      return null;
+    }
+  }
+
+  setLocal(key, jsonData, expirationMS?) {
+
+    if (typeof (Storage) == "undefined")
+    {
+      return false;
+    }
+    /*var expirationMS = expirationMin * 60 * 1000;*/
+    if (typeof (expirationMS) == "undefined")
+    {
+      expirationMS = 24 * 60 * 60 * 1000;
+    }
+    let record =
+      {
+        value: JSON.stringify(jsonData),
+        timestamp: new Date().getTime() + expirationMS
+      };
+    localStorage.setItem(key, JSON.stringify(record));
+    return jsonData;
   }
 
 
